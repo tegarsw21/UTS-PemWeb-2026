@@ -1,0 +1,897 @@
+/* =====================================================
+   STYLE.CSS - Portofolio Website
+   Materi: CSS & CSS Lanjut (Modul Pemrograman Web)
+   ===================================================== */
+
+/* â”€â”€ 1. RESET & BASE STYLES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f2f5;
+    color: #1a1a2e;
+    line-height: 1.7;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* â”€â”€ 2. DARK MODE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+body.dark-mode {
+    background-color: #0f0f1a;
+    color: #e8e8f0;
+}
+
+body.dark-mode .header {
+    background-color: #1a1a2e;
+    border-bottom: 1px solid #2d2d4e;
+}
+
+body.dark-mode #header {
+    background-color: #16213e;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .section-alt {
+    background-color: #16213e;
+}
+
+body.dark-mode .project-card {
+    background-color: #1a1a2e;
+    border-color: #2d2d4e;
+    color: #e8e8f0;
+}
+
+body.dark-mode .project-card h3 {
+    color: #a78bfa;
+}
+
+body.dark-mode .timeline-content {
+    background-color: #1a1a2e;
+    border-color: #2d2d4e;
+    color: #e8e8f0;
+}
+
+body.dark-mode .timeline-content h3 {
+    color: #a78bfa;
+}
+
+body.dark-mode .info-row {
+    border-bottom-color: #2d2d4e;
+}
+
+body.dark-mode .info-label {
+    color: #a78bfa;
+}
+
+body.dark-mode .kontak-info-item {
+    background-color: #1a1a2e;
+    border-color: #2d2d4e;
+}
+
+body.dark-mode .kontak-info-item h3 {
+    color: #a78bfa;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #1a1a2e;
+    border-color: #2d2d4e;
+    color: #e8e8f0;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: #555575;
+}
+
+body.dark-mode .skill-card {
+    background-color: #1a1a2e;
+    border-color: #2d2d4e;
+    color: #e8e8f0;
+}
+
+body.dark-mode .skill-card h3 {
+    color: #a78bfa;
+}
+
+body.dark-mode #footer {
+    background-color: #0f0f1a;
+    border-top-color: #2d2d4e;
+    color: #888;
+}
+
+/* â”€â”€ 3. HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+#header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -1px;
+}
+
+.logo .accent {
+    color: #7c3aed;
+}
+
+.tagline {
+    font-size: 0.75rem;
+    color: #a0a8c0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+
+/* â”€â”€ 4. NAVIGASI â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+#navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #c0c8e0;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(124, 58, 237, 0.2);
+    color: #a78bfa;
+}
+
+.nav-link.active {
+    background-color: #7c3aed;
+    color: #ffffff;
+}
+
+/* â”€â”€ 5. TOMBOL DARK MODE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+#btnDarkMode {
+    background-color: rgba(124, 58, 237, 0.2);
+    color: #c0c8e0;
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+#btnDarkMode:hover {
+    background-color: #7c3aed;
+    color: #ffffff;
+    border-color: #7c3aed;
+}
+
+/* â”€â”€ 6. SECTION UMUM â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.section {
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-alt {
+    background-color: #e8eaf0;
+    max-width: 100%;
+    padding: 5rem 2rem;
+}
+
+.section-alt .section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #7c3aed, #a78bfa);
+    border-radius: 2px;
+    margin: 0.5rem auto 0;
+}
+
+.section-title.left-align {
+    text-align: left;
+}
+
+.section-title.left-align::after {
+    margin-left: 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+}
+
+body.dark-mode .section-title {
+    color: #e8e8f0;
+}
+
+body.dark-mode .section-subtitle {
+    color: #999;
+}
+
+/* â”€â”€ 7. HERO SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-sub {
+    font-size: 1rem;
+    color: #7c3aed;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1a1a2e;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+body.dark-mode .hero-text h2 {
+    color: #e8e8f0;
+}
+
+.hero-desc {
+    color: #555;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    max-width: 480px;
+}
+
+body.dark-mode .hero-desc {
+    color: #aaa;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* â”€â”€ 8. TOMBOL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.btn-primary {
+    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    color: #ffffff;
+    padding: 0.75rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #7c3aed;
+    padding: 0.75rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #7c3aed;
+    cursor: pointer;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #7c3aed;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* â”€â”€ 9. FOTO PROFIL & AVATAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.hero-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar-ring {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #7c3aed, #a78bfa, #5b21b6);
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f0f2f5;
+    transition: opacity 0.4s;
+    background-color: #d1c4e9;
+}
+
+body.dark-mode .avatar-img {
+    border-color: #16213e;
+}
+
+.avatar-img.tersembunyi {
+    opacity: 0;
+}
+
+/* Tombol Sembunyikan/Tampilkan Foto */
+.foto-controls {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#btnSembunyikanFoto,
+#btnTampilkanFoto {
+    background-color: #f0f2f5;
+    color: #1a1a2e;
+    border: 1px solid #d0d4e0;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#btnSembunyikanFoto:hover,
+#btnTampilkanFoto:hover {
+    background-color: #7c3aed;
+    color: #fff;
+    border-color: #7c3aed;
+    transform: scale(1.03);
+}
+
+body.dark-mode #btnSembunyikanFoto,
+body.dark-mode #btnTampilkanFoto {
+    background-color: #1a1a2e;
+    color: #e8e8f0;
+    border-color: #2d2d4e;
+}
+
+/* â”€â”€ 10. SKILLS GRID (di Beranda) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e4f0;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.skill-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.skill-card p {
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 0.25rem;
+}
+
+/* â”€â”€ 11. PROYEK CARDS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e4f0;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);
+}
+
+.project-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: rgba(124, 58, 237, 0.1);
+    color: #7c3aed;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin: 0.2rem 0.1rem;
+}
+
+/* â”€â”€ 12. TENTANG SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.tentang-section {
+    padding-top: 4rem;
+}
+
+.tentang-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4rem;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.tentang-foto-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tentang-desc {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 0.98rem;
+}
+
+body.dark-mode .tentang-desc {
+    color: #aaa;
+}
+
+.info-table {
+    margin-top: 1.5rem;
+    border-top: 1px solid #e0e4f0;
+}
+
+.info-row {
+    display: flex;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0e4f0;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.info-label {
+    min-width: 140px;
+    font-weight: 700;
+    color: #7c3aed;
+}
+
+.info-value {
+    color: #333;
+}
+
+body.dark-mode .info-value {
+    color: #ccc;
+}
+
+/* â”€â”€ 13. SKILL BARS (Progress Bar) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.section-alt .skills-bars {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skills-bars {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill-bar-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #1a1a2e;
+}
+
+body.dark-mode .skill-bar-label {
+    color: #e8e8f0;
+}
+
+.skill-bar-track {
+    background-color: #d0d4e8;
+    border-radius: 20px;
+    height: 12px;
+    overflow: hidden;
+}
+
+body.dark-mode .skill-bar-track {
+    background-color: #2d2d4e;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #7c3aed, #a78bfa);
+    border-radius: 20px;
+    transition: width 1.2s ease-in-out;
+}
+
+/* â”€â”€ 14. TIMELINE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #7c3aed, #a78bfa, transparent);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #7c3aed;
+    border: 3px solid #f0f2f5;
+    box-shadow: 0 0 0 2px #7c3aed;
+}
+
+body.dark-mode .timeline-dot {
+    border-color: #0f0f1a;
+}
+
+.timeline-content {
+    background-color: #ffffff;
+    border: 1px solid #e0e4f0;
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+}
+
+.timeline-year {
+    font-size: 0.78rem;
+    color: #7c3aed;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timeline-content h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0.3rem 0;
+}
+
+.timeline-content p {
+    font-size: 0.88rem;
+    color: #666;
+}
+
+body.dark-mode .timeline-content p {
+    color: #999;
+}
+
+/* â”€â”€ 15. KONTAK SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.kontak-section {
+    padding-top: 4rem;
+}
+
+.kontak-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.kontak-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.kontak-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #e0e4f0;
+    border-radius: 10px;
+    padding: 1.2rem;
+    transition: transform 0.2s;
+}
+
+.kontak-info-item:hover {
+    transform: translateX(5px);
+}
+
+.kontak-icon-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #7c3aed;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #7c3aed;
+    border-radius: 4px;
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 2px;
+}
+
+.kontak-info-item h3 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #7c3aed;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.kontak-info-item p {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+body.dark-mode .kontak-info-item p {
+    color: #aaa;
+}
+
+/* â”€â”€ 16. FORM â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+body.dark-mode .form-group label {
+    color: #aaa;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e0e4f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a2e;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+input.input-error,
+textarea.input-error {
+    border-color: #dc2626;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.error-msg {
+    color: #dc2626;
+    font-size: 0.82rem;
+    margin-top: 0.3rem;
+    min-height: 1.2rem;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+}
+
+/* â”€â”€ 17. NOTIFIKASI SUKSES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.notif-sukses {
+    margin-top: 1.5rem;
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+body.dark-mode .notif-sukses {
+    background-color: #064e3b;
+    color: #6ee7b7;
+    border-color: #065f46;
+}
+
+/* â”€â”€ 18. FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+#footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a1a2e;
+    color: #888;
+    font-size: 0.88rem;
+    border-top: 1px solid #2d2d4e;
+    margin-top: 2rem;
+}
+
+/* â”€â”€ 19. RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .hero-desc {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .tentang-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .kontak-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.7rem;
+    }
+}
+

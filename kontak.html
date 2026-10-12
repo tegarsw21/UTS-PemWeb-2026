@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi Tegar Satria - Form kontak untuk pertanyaan dan kolaborasi.">
+    <title>Portofolio | Kontak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="header-content">
+            <h1 class="logo">MyPorto<span class="accent">.</span></h1>
+            <p class="tagline">Web Developer &amp; Designer</p>
+        </div>
+
+        <!-- NAVIGASI -->
+        <nav id="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link" id="nav-beranda">Beranda</a></li>
+                <li><a href="tentang.html" class="nav-link" id="nav-tentang">Tentang Kami</a></li>
+                <li><a href="kontak.html" class="nav-link active" id="nav-kontak">Kontak</a></li>
+            </ul>
+            <button id="btnDarkMode" onclick="toggleDarkMode()">Dark Mode</button>
+        </nav>
+    </header>
+
+    <!-- KONTEN UTAMA - KONTAK -->
+    <main id="main-content">
+
+        <!-- SECTION KONTAK -->
+        <section id="kontak" class="section kontak-section">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <p class="section-subtitle">Punya pertanyaan atau ingin berkolaborasi? Kirim pesan!</p>
+
+            <div class="kontak-grid">
+
+                <!-- INFO KONTAK -->
+                <div class="kontak-info">
+                    <div class="kontak-info-item">
+                        <div class="kontak-icon-label">Email</div>
+                        <div>
+                            <p>tegar.satria@mhs.unesa.ac.id</p>
+                        </div>
+                    </div>
+                    <div class="kontak-info-item">
+                        <div class="kontak-icon-label">Lokasi</div>
+                        <div>
+                            <p>Surabaya, Jawa Timur, Indonesia</p>
+                        </div>
+                    </div>
+                    <div class="kontak-info-item">
+                        <div class="kontak-icon-label">Universitas</div>
+                        <div>
+                            <p>Universitas Negeri Surabaya</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORM KONTAK (dengan validasi JavaScript) -->
+                <div class="kontak-form-col">
+                    <form id="formKontak" onsubmit="kirimPesan(event)" novalidate>
+                        <div class="form-group">
+                            <label for="inputNama">Nama Lengkap</label>
+                            <input type="text" id="inputNama" name="nama" placeholder="Masukkan nama Anda...">
+                            <p class="error-msg" id="errorNama"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" id="inputEmail" name="email" placeholder="contoh@email.com">
+                            <p class="error-msg" id="errorEmail"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputPesan">Pesan</label>
+                            <textarea id="inputPesan" name="pesan" rows="5" placeholder="Tuliskan pesan Anda di sini..."></textarea>
+                            <p class="error-msg" id="errorPesan"></p>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-submit" id="btnKirim">
+                            Kirim Pesan
+                        </button>
+
+                        <!-- Notifikasi sukses (ditampilkan oleh JavaScript) -->
+                        <div id="notifSukses" class="notif-sukses" style="display:none;">
+                            Pesan berhasil dikirim! Terima kasih, saya akan segera membalas.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p>&copy; 2024 MyPorto. Dibuat dengan HTML, CSS &amp; JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

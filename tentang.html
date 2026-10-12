@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tentang Kami - Portofolio Tegar Satria, mahasiswa Manajemen Informatika UNESA.">
+    <title>Portofolio | Tentang Kami</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="header-content">
+            <h1 class="logo">MyPorto<span class="accent">.</span></h1>
+            <p class="tagline">Web Developer &amp; Designer</p>
+        </div>
+
+        <!-- NAVIGASI -->
+        <nav id="navbar">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link" id="nav-beranda">Beranda</a></li>
+                <li><a href="tentang.html" class="nav-link active" id="nav-tentang">Tentang Kami</a></li>
+                <li><a href="kontak.html" class="nav-link" id="nav-kontak">Kontak</a></li>
+            </ul>
+            <button id="btnDarkMode" onclick="toggleDarkMode()">Dark Mode</button>
+        </nav>
+    </header>
+
+    <!-- KONTEN UTAMA - TENTANG KAMI -->
+    <main id="main-content">
+
+        <!-- SECTION TENTANG -->
+        <section id="tentang" class="section tentang-section">
+            <div class="tentang-grid">
+                <!-- Foto Profil dengan tombol sembunyikan/tampilkan -->
+                <div class="tentang-foto-col">
+                    <div class="avatar-ring">
+                        <img src="avatar.png" alt="Foto Profil Tegar Satria" id="foto-profil" class="avatar-img">
+                    </div>
+                    <div class="foto-controls">
+                        <button id="btnSembunyikanFoto" onclick="sembunyikanFoto()">Sembunyikan Foto</button>
+                        <button id="btnTampilkanFoto" onclick="tampilkanFoto()" style="display:none;">Tampilkan Foto</button>
+                    </div>
+                </div>
+
+                <!-- Info Diri -->
+                <div class="tentang-info-col">
+                    <h2 class="section-title left-align">Tentang Saya</h2>
+                    <p class="tentang-desc">
+                        Halo! Nama saya <strong>Tegar Satria</strong>, seorang mahasiswa semester 3
+                        Program Studi Sarjana Terapan Manajemen Informatika di Universitas Negeri Surabaya (UNESA).
+                    </p>
+                    <p class="tentang-desc">
+                        Saya memiliki ketertarikan besar dalam bidang pengembangan web, khususnya dalam
+                        membuat tampilan yang menarik dan interaktif menggunakan HTML, CSS, dan JavaScript.
+                        Saya terus belajar dan mengembangkan diri untuk menjadi web developer yang handal.
+                    </p>
+
+                    <!-- Informasi Pribadi -->
+                    <div class="info-table">
+                        <div class="info-row">
+                            <span class="info-label">Nama</span>
+                            <span class="info-value">Tegar Satria</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Program Studi</span>
+                            <span class="info-value">Sarjana Terapan Manajemen Informatika</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Universitas</span>
+                            <span class="info-value">Universitas Negeri Surabaya</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Semester</span>
+                            <span class="info-value">3</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">tegar.satria@mhs.unesa.ac.id</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION PROGRESS BAR KEAHLIAN -->
+        <section id="kemampuan" class="section section-alt">
+            <h2 class="section-title">Kemampuan</h2>
+            <p class="section-subtitle">Tingkat penguasaan teknologi yang saya pelajari</p>
+            <div class="skills-bars" id="skills-bars">
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>HTML</span>
+                        <span id="html-pct">0%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" id="html-bar" data-value="85"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>CSS</span>
+                        <span id="css-pct">0%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" id="css-bar" data-value="78"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>JavaScript</span>
+                        <span id="js-pct">0%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" id="js-bar" data-value="65"></div>
+                    </div>
+                </div>
+                <div class="skill-bar-item">
+                    <div class="skill-bar-label">
+                        <span>jQuery</span>
+                        <span id="jq-pct">0%</span>
+                    </div>
+                    <div class="skill-bar-track">
+                        <div class="skill-bar-fill" id="jq-bar" data-value="55"></div>
+                    </div>
+                </div>
+            </div>
+            <button id="btnAnimasiBar" onclick="animasiProgressBar()" class="btn-primary" style="margin-top:2rem;">
+                Jalankan Animasi
+            </button>
+        </section>
+
+        <!-- SECTION PENGALAMAN -->
+        <section id="pengalaman" class="section">
+            <h2 class="section-title">Pengalaman &amp; Pendidikan</h2>
+            <p class="section-subtitle">Perjalanan akademik dan kegiatan saya</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2023 - Sekarang</span>
+                        <h3>Mahasiswa S1 Terapan Manajemen Informatika</h3>
+                        <p>Universitas Negeri Surabaya (UNESA) - Fakultas Vokasi</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h3>Peserta Workshop Web Development</h3>
+                        <p>Mengikuti pelatihan pengembangan web yang mencakup HTML, CSS, JavaScript, dan framework modern.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020 - 2023</span>
+                        <h3>SMA Negeri</h3>
+                        <p>Lulus dengan jurusan IPA dan aktif dalam kegiatan ekstrakurikuler komputer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p>&copy; 2024 MyPorto. Dibuat dengan HTML, CSS &amp; JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
