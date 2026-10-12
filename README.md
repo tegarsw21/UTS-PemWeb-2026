@@ -23,8 +23,6 @@ Website portofolio personal yang dibuat sebagai tugas **Ujian Tengah Semester (U
 |-- style.css           -> File CSS (semua styling)
 |-- script.js           -> File JavaScript (semua interaksi)
 |-- avatar.png          -> Foto profil
-|-- bahan belajar.pdf   -> Berkas Laporan Penjelasan Kode (PDF)
-|-- laporan.md          -> Berkas Laporan Penjelasan Kode (Markdown)
 +-- README.md           -> Dokumentasi proyek ini
 ```
 
