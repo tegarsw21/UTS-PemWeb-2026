@@ -1,74 +1,80 @@
-﻿# ðŸŒ Portofolio Website â€“ UTS Pemrograman Web
+# Portofolio Website - UTS Pemrograman Web
 
+**Nama Mahasiswa:** Tegar Satria  
 **Matakuliah:** Pemrograman Web  
 **Program Studi/Semester:** Sarjana Terapan Manajemen Informatika / 3  
-**Dosen:** Ari Kurniawan, S.Kom., M.T. & Faris Abdi El Hakim, S.Kom., M.Tr.Kom.
+**Dosen:** Ari Kurniawan, S.Kom., M.T. & Faris Abdi El Hakim, S.Kom., M.Tr.Kom.  
 
 ---
 
-## ðŸ“Œ Deskripsi Proyek
+## Deskripsi Proyek
 
 Website portofolio personal yang dibuat sebagai tugas **Ujian Tengah Semester (UTS) Pemrograman Web**. Website ini dibangun menggunakan **HTML, CSS, dan JavaScript** murni (vanilla) tanpa framework tambahan. Tujuannya adalah untuk mendemonstrasikan kemampuan dalam membuat halaman web interaktif yang mencakup struktur HTML yang baik, desain CSS yang estetis, dan interaksi JavaScript yang fungsional.
 
 ---
 
-## ðŸ“‚ Struktur File
+## Struktur File
 
 ```
 /
-â”œâ”€â”€ index.html       â†’ Halaman Beranda
-â”œâ”€â”€ tentang.html     â†’ Halaman Tentang Kami
-â”œâ”€â”€ kontak.html      â†’ Halaman Kontak
-â”œâ”€â”€ style.css        â†’ File CSS (semua styling)
-â”œâ”€â”€ script.js        â†’ File JavaScript (semua interaksi)
-â”œâ”€â”€ avatar.png       â†’ Foto profil
-â””â”€â”€ README.md        â†’ Dokumentasi proyek ini
+|-- index.html          -> Halaman Beranda
+|-- tentang.html        -> Halaman Tentang Kami
+|-- kontak.html         -> Halaman Kontak
+|-- style.css           -> File CSS (semua styling)
+|-- script.js           -> File JavaScript (semua interaksi)
+|-- avatar.png          -> Foto profil
+|-- bahan belajar.pdf   -> Berkas Laporan Penjelasan Kode (PDF)
+|-- laporan.md          -> Berkas Laporan Penjelasan Kode (Markdown)
++-- README.md           -> Dokumentasi proyek ini
 ```
 
 ---
 
-## ðŸš€ Cara Membuka Website
+## Cara Membuka Website
 
 ### Lokal (Tanpa Hosting)
-1. Download atau clone repositori ini
-2. Buka file `index.html` langsung di browser (Google Chrome / Firefox / Edge)
-3. Klik kanan â†’ "Open with" â†’ Browser pilihan Anda
+1. Download atau clone repositori ini:
+   ```bash
+   git clone https://github.com/tegarsw21/UTS-PemWeb-2026.git
+   ```
+2. Buka file `index.html` langsung di browser (Google Chrome / Firefox / Edge / Brave).
+3. Atau klik kanan pada `index.html` -> "Open with" -> Browser pilihan Anda.
 
 ### Via GitHub Pages (Hosting)
-Akses website melalui link GitHub Pages:  
-ðŸ”— **[https://username.github.io/nama-repo](https://username.github.io/nama-repo)**
+Akses website secara online melalui tautan GitHub Pages:  
+**[https://tegarsw21.github.io/UTS-PemWeb-2026/](https://tegarsw21.github.io/UTS-PemWeb-2026/)**
 
 ---
 
-## ðŸ“„ Halaman-Halaman Website
+## Halaman-Halaman Website
 
-### 1. ðŸ  Beranda (`index.html`)
+### 1. Beranda (`index.html`)
 Halaman utama yang menampilkan:
 - **Hero Section** dengan nama, deskripsi singkat, dan tombol aksi
 - **Foto profil** dengan tombol Sembunyikan/Tampilkan Foto
-- **Section Keahlian** â€“ diisi secara dinamis menggunakan DOM Manipulation (`createElement`, `appendChild`)
-- **Section Proyek Terbaru** â€“ menampilkan 3 kartu proyek dengan hover effect
+- **Section Keahlian** - diisi secara dinamis menggunakan DOM Manipulation (`createElement`, `appendChild`)
+- **Section Proyek Terbaru** - menampilkan 3 kartu proyek dengan efek hover
 
-### 2. ðŸ‘¤ Tentang Kami (`tentang.html`)
+### 2. Tentang Kami (`tentang.html`)
 Halaman profil lengkap yang menampilkan:
 - Foto profil dengan tombol **Sembunyikan/Tampilkan Foto** (DOM Manipulation)
 - Deskripsi diri dan informasi pribadi (nama, prodi, universitas, semester, email)
 - **Progress Bar Keahlian** dengan animasi CSS + JavaScript (HTML 85%, CSS 78%, JS 65%, jQuery 55%)
 - **Timeline Pengalaman & Pendidikan**
 
-### 3. ðŸ“¬ Kontak (`kontak.html`)
+### 3. Kontak (`kontak.html`)
 Halaman kontak yang menampilkan:
 - Informasi kontak (email, lokasi, universitas)
 - **Form Kontak** lengkap dengan validasi JavaScript:
   - Validasi nama tidak boleh kosong
   - Validasi format email (harus mengandung `@` dan `.`)
   - Validasi pesan tidak boleh kosong
-  - Pesan error ditampilkan dengan **warna merah** di bawah field yang salah
+  - Pesan error ditampilkan dengan **warna merah** di bawah kolom input yang salah
   - Notifikasi **"Pesan berhasil dikirim"** muncul jika semua input valid
 
 ---
 
-## ðŸ—ï¸ Penjelasan Struktur HTML
+## Penjelasan Struktur HTML
 
 File HTML menggunakan elemen-elemen **semantik HTML5**:
 
@@ -78,23 +84,23 @@ File HTML menggunakan elemen-elemen **semantik HTML5**:
 | `<nav>` | Navigasi menu antar halaman |
 | `<main>` | Konten utama setiap halaman |
 | `<section>` | Membagi konten utama menjadi bagian-bagian logis |
-| `<footer>` | Footer halaman berisi copyright |
+| `<footer>` | Footer halaman berisi hak cipta |
 | `<form>` | Form kontak dengan validasi |
-| `<ul>/<li>` | Daftar item navigasi |
+| `<ul> / <li>` | Daftar item navigasi |
 
 Setiap halaman memiliki:
-- Tag `<meta charset>` dan `<meta viewport>` untuk kompatibilitas
+- Tag `<meta charset>` dan `<meta viewport>` untuk kompatibilitas perangkat
 - `<meta name="description">` untuk SEO
 - `<title>` yang deskriptif
-- Hierarki heading yang benar (`<h1>` untuk logo, `<h2>` untuk judul section)
-- Elemen interaktif dengan `id` yang unik dan deskriptif
+- Hierarki heading yang terstruktur (`<h1>` untuk logo/nama, `<h2>` untuk judul section)
+- Elemen interaktif dengan atribut `id` yang unik dan deskriptif
 
 ---
 
-## ðŸŽ¨ Penjelasan Desain CSS
+## Penjelasan Desain CSS
 
 ### Sistem Warna
-- **Warna utama:** `#7c3aed` (ungu) â€“ digunakan untuk aksen, tombol, dan elemen aktif
+- **Warna utama:** `#7c3aed` (ungu) - digunakan untuk aksen, tombol, dan elemen aktif
 - **Background terang:** `#f0f2f5`
 - **Background gelap (dark mode):** `#0f0f1a`
 - **Gradient header:** `linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)`
@@ -102,14 +108,14 @@ Setiap halaman memiliki:
 ### Fitur-Fitur CSS yang Diimplementasikan
 
 #### a. Dark Mode
-- Menggunakan **class toggle** (`.dark-mode` ditambahkan ke `body`)
+- Menggunakan **class toggle** (`.dark-mode` ditambahkan ke elemen `body`)
 - Semua elemen memiliki aturan CSS khusus untuk dark mode
 - Transisi halus menggunakan `transition: background-color 0.4s, color 0.4s`
 
 #### b. Hover Effects
 - **Project Cards:** `transform: translateY(-6px)` dan `box-shadow` saat hover
-- **Skill Cards:** efek naik dengan shadow ungu saat hover
-- **Tombol-tombol:** perubahan warna dan bayangan saat hover
+- **Skill Cards:** efek kartu terangkat dengan bayangan ungu saat hover
+- **Tombol-tombol:** transformasi posisi dan bayangan saat hover
 - **Kontak Info Items:** `transform: translateX(5px)` saat hover
 
 #### c. Animasi Transisi
@@ -125,82 +131,81 @@ Setiap halaman memiliki:
 
 ---
 
-## âš¡ Penjelasan Fungsionalitas JavaScript
+## Penjelasan Fungsionalitas JavaScript
 
-### 1. Dark Mode â€“ `toggleDarkMode()`
+### 1. Dark Mode - `toggleDarkMode()`
 **Kategori:** Style & Animation + DOM Manipulation  
 - Menggunakan `document.body.classList.contains()`, `.add()`, `.remove()` untuk toggle class
 - Mengubah teks tombol menggunakan `.innerText`
 - Menyimpan preferensi ke `localStorage` agar tersimpan meski halaman di-refresh
 
-### 2. Sembunyikan/Tampilkan Foto â€“ `sembunyikanFoto()` & `tampilkanFoto()`
+### 2. Sembunyikan/Tampilkan Foto - `sembunyikanFoto()` & `tampilkanFoto()`
 **Kategori:** DOM Manipulation + Style & Animation  
 - Mengakses elemen dengan `document.getElementById()`
 - Mengubah `style.opacity` dan `style.visibility` untuk animasi visibilitas
 - Menampilkan/menyembunyikan tombol secara bergantian dengan `style.display`
 
-### 3. Validasi Form â€“ `kirimPesan(event)`
+### 3. Validasi Form - `kirimPesan(event)`
 **Kategori:** Form Validation + DOM Manipulation + Event Handling  
 - `event.preventDefault()` mencegah reload halaman saat form submit
 - Mengambil nilai input dengan `.value.trim()`
-- Menampilkan pesan error merah menggunakan `.innerText` pada elemen paragraph
-- Menambah/menghapus class `input-error` untuk styling visual error
+- Menampilkan pesan error merah menggunakan `.innerText` pada elemen paragraf
+- Menambah/menghapus class `input-error` untuk penanda visual
 - Menampilkan notifikasi sukses dengan `style.display = "block"`
 
-### 4. Animasi Progress Bar â€“ `animasiProgressBar()` & `animasiCounter()`
+### 4. Animasi Progress Bar - `animasiProgressBar()` & `animasiCounter()`
 **Kategori:** Style & Animation + DOM Manipulation  
-- Menggunakan `document.querySelectorAll()` untuk memilih semua bar sekaligus
-- Mengubah `style.width` secara dinamis untuk animasi bar
-- `setTimeout()` dan `setInterval()` untuk animasi counter angka persentase
+- Menggunakan `document.querySelectorAll()` untuk memilih seluruh bilah keahlian
+- Mengubah `style.width` secara dinamis untuk animasi bilah
+- `setTimeout()` dan `setInterval()` untuk animasi hitungan angka persentase
 - Membaca nilai target dari atribut `data-value` menggunakan `getAttribute()`
 
-### 5. Isi Skills Grid â€“ `isiSkillsGrid()`
+### 5. Isi Skills Grid - `isiSkillsGrid()`
 **Kategori:** DOM Manipulation  
 - Menggunakan **array** untuk menyimpan data keahlian
 - Loop `for...of` untuk iterasi array (sesuai modul)
-- `createElement()` dan `appendChild()` untuk membuat elemen dinamis (sesuai modul latihan 2)
-- `innerHTML = ""` untuk reset container sebelum mengisi ulang
+- `createElement()` dan `appendChild()` untuk membuat elemen dinamis
+- `innerHTML = ""` untuk reset kontainer sebelum mengisi ulang
 
-### 6. Event Handling pada Cards â€“ `pasangEventCards()`
+### 6. Event Handling pada Cards - `pasangEventCards()`
 **Kategori:** Event Handling + Style & Animation  
-- `addEventListener("mouseover", ...)` untuk deteksi hover
-- `addEventListener("mouseout", ...)` untuk mengembalikan style saat mouse keluar
+- `addEventListener("mouseover", ...)` untuk mendeteksi hover kursor
+- `addEventListener("mouseout", ...)` untuk mengembalikan gaya saat kursor keluar
 - Mengubah `style.borderColor` secara langsung
 
-### 7. Event Handling pada Form Input â€“ `pasangEventInput()`
+### 7. Event Handling pada Form Input - `pasangEventInput()`
 **Kategori:** Event Handling + DOM Manipulation  
-- `addEventListener("input", ...)` untuk real-time response
-- Menghapus pesan error saat user mulai mengetik
+- `addEventListener("input", ...)` untuk respons real-time
+- Menghapus pesan error dan batas merah saat pengguna mulai mengetik kembali
 
-### 8. Inisialisasi â€“ `window.addEventListener("load", ...)`
+### 8. Inisialisasi - `window.addEventListener("load", ...)`
 **Kategori:** Event Handling  
-- Menjalankan semua fungsi inisialisasi setelah halaman selesai dimuat
-- Mengecek preferensi dark mode dari `localStorage`
+- Menjalankan seluruh inisialisasi setelah halaman selesai dimuat
+- Memeriksa preferensi dark mode dari `localStorage`
 - Memulai animasi progress bar dengan `setTimeout()` (delay 500ms)
 
 ---
 
-## âœ… Pemenuhan Kriteria Penilaian UTS
+## Pemenuhan Kriteria Penilaian UTS
 
 | Kriteria | Poin | Implementasi |
 |----------|------|--------------|
-| **Struktur HTML** | 20 | 3 halaman dengan elemen semantik lengkap, navigasi antar halaman, heading hierarchy yang benar, id unik pada semua elemen interaktif |
-| **Desain CSS** | 30 | Sistem warna konsisten, dark mode, hover effects, animasi transisi, flexbox & grid layout, progress bar, responsive design |
-| **Kreativitas & Desain** | 20 | Dark mode toggle, gradient header, card hover animations, timeline design, progress bar animasi, color-coded error messages |
-| **Dokumentasi & SRS** | 30 | README.md ini â€“ menjelaskan struktur, desain CSS, dan setiap fungsi JavaScript secara detail |
-| **Fungsionalitas JavaScript** | 20 | 4 kategori JS: Event Handling, DOM Manipulation, Style & Animation, Form Validation â€“ semuanya diimplementasikan |
+| **Struktur HTML** | 20 | 3 halaman dengan elemen semantik lengkap, navigasi antar halaman, hierarki heading yang benar, id unik pada semua elemen interaktif |
+| **Desain CSS** | 30 | Sistem warna konsisten, dark mode, efek hover, animasi transisi, flexbox & grid layout, progress bar, responsive design |
+| **Kreativitas & Desain** | 20 | Dark mode toggle, header gradien, animasi hover kartu, garis waktu riwayat, bilah kemahiran beranimasi, penanda pesan error |
+| **Dokumentasi & Laporan** | 30 | README.md dan laporan lengkap - menjelaskan struktur, desain CSS, dan seluruh fungsi JavaScript baris per baris |
+| **Fungsionalitas JavaScript** | 20 | 4 kategori JS: Event Handling, DOM Manipulation, Style & Animation, Form Validation - seluruhnya diimplementasikan |
 
 ---
 
-## ðŸ“š Referensi Materi
+## Referensi Materi
 
-Seluruh kode dibuat berdasarkan materi yang diajarkan dalam modul:
-- **Modul 2: HTML** â€“ Struktur dasar, elemen semantik, form
-- **Modul 3 & 4: CSS & CSS Lanjut** â€“ Styling, flexbox, grid, animasi
-- **Modul 6: JavaScript & Manipulasi DOM** â€“ Variabel, fungsi, array, DOM, event handling
-- **Modul 7: jQuery** â€“ (sebagai referensi konsep selector dan method)
+Seluruh kode dibuat berdasarkan materi yang diajarkan dalam modul perkuliahan:
+- **Modul 2: HTML** - Struktur dasar, elemen semantik, form
+- **Modul 3 & 4: CSS & CSS Lanjut** - Styling, flexbox, grid, animasi
+- **Modul 6: JavaScript & Manipulasi DOM** - Variabel, fungsi, array, DOM, event handling
+- **Modul 7: jQuery** - Konsep selector dan manipulasi elemen
 
 ---
 
-*Dibuat untuk Ujian Tengah Semester Pemrograman Web â€“ Sarjana Terapan Manajemen Informatika, Universitas Negeri Surabaya*
-
+*Dibuat untuk Ujian Tengah Semester Pemrograman Web - Sarjana Terapan Manajemen Informatika, Universitas Negeri Surabaya*
